@@ -25,7 +25,7 @@ export const Instructors = () => {
   return (
     <section className="relative w-full py-24 bg-black text-white overflow-hidden">
       {/* Top Gradient for smooth transition */}
-      <div className="absolute top-0 left-0 w-full h-48 bg-gradient-to-b from-black to-transparent z-20 pointer-events-none" />
+      <div className="absolute top-0 left-0 w-full h-48 bg-gradient-to-b from-black to-transparent z-[5] pointer-events-none" />
 
       {/* Background Blurs */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[300px] bg-blue-900/10 blur-[100px] pointer-events-none" />
@@ -35,7 +35,7 @@ export const Instructors = () => {
       <div className="relative z-10 container mx-auto px-4">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-24 text-white">Наши инструкторы</h2>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto relative z-30">
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {instructors.map((inst, idx) => (
             <div key={idx} className="bg-[#121212] rounded-[2rem] p-8 pt-0 relative border border-white/5 flex flex-col items-center mt-12 hover:border-white/10 transition-colors">
               {/* Avatar - Negative margin to pop out */}
@@ -54,7 +54,7 @@ export const Instructors = () => {
         </div>
       </div>
       {/* Bottom Gradient for smooth transition */}
-      <div className="absolute bottom-0 left-0 w-full h-96 bg-gradient-to-b from-transparent to-black z-20 pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-full h-96 bg-gradient-to-b from-transparent to-black z-[5] pointer-events-none" />
     </section>
   );
 };

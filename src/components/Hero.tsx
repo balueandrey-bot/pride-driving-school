@@ -41,14 +41,14 @@ export const Hero = () => {
         </div>
 
         {/* CTA Button */}
-        <button className="relative z-30 mt-12 group px-10 py-5 bg-brand rounded-full font-bold text-lg md:text-xl text-white overflow-hidden transition-all hover:scale-105 hover:shadow-[0_0_30px_rgba(228,84,0,0.4)]">
+        <button className="mt-12 group relative px-10 py-5 bg-brand rounded-full font-bold text-lg md:text-xl text-white overflow-hidden transition-all hover:scale-105 hover:shadow-[0_0_30px_rgba(228,84,0,0.4)]">
           <span className="relative z-10">Записаться на курс</span>
           <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
         </button>
 
       </div>
       {/* Bottom Gradient for smooth transition */}
-      <div className="absolute bottom-0 left-0 w-full h-96 bg-gradient-to-b from-transparent to-black z-20 pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-full h-96 bg-gradient-to-b from-transparent to-black z-[5] pointer-events-none" />
     </section>
   );
 };

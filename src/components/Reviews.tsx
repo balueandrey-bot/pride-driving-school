@@ -15,7 +15,7 @@ export const Reviews = () => {
   return (
     <section className="relative w-full py-24 bg-black text-white overflow-hidden">
       {/* Top Gradient for smooth transition */}
-      <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-black to-transparent z-20 pointer-events-none" />
+      <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-black to-transparent z-[5] pointer-events-none" />
 
       <div className="relative z-10">
         <div className="container mx-auto px-4 mb-16">
@@ -37,7 +37,7 @@ export const Reviews = () => {
         </div>
 
         {/* Big Blue CTA Block */}
-        <div className="container mx-auto px-4 mt-8 relative z-30">
+        <div className="container mx-auto px-4 mt-8">
           <div className="max-w-4xl mx-auto">
             <div className="w-full h-[300px] rounded-[3rem] bg-gradient-to-br from-[#00b4fc] to-[#007cf0] flex items-center justify-center shadow-[0_0_100px_rgba(0,180,252,0.15)] relative overflow-hidden group cursor-pointer hover:shadow-[0_0_120px_rgba(0,180,252,0.3)] transition-all duration-500">
               {/* Glow effect */}
@@ -49,7 +49,7 @@ export const Reviews = () => {
         </div>
       </div>
       {/* Bottom Gradient for smooth transition */}
-      <div className="absolute bottom-0 left-0 w-full h-64 bg-gradient-to-b from-transparent to-black z-20 pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-full h-64 bg-gradient-to-b from-transparent to-black z-[5] pointer-events-none" />
     </section>
   );
 };

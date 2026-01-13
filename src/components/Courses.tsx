@@ -21,7 +21,7 @@ export const Courses = () => {
   return (
     <section className="relative w-full pt-20 pb-32 bg-black text-white overflow-hidden">
       {/* Top Gradient for smooth transition from Hero */}
-      <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-black to-transparent z-20 pointer-events-none" />
+      <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-black to-transparent z-[5] pointer-events-none" />
 
       {/* Background Blurs */}
       <div className="absolute top-1/4 -left-32 w-[500px] h-[500px] bg-orange-900/20 rounded-full blur-[120px] pointer-events-none" />
@@ -32,7 +32,7 @@ export const Courses = () => {
       <div className="relative z-10 container mx-auto px-4">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-white">Курсы</h2>
 
-        <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto relative z-30">
+        <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
           {/* Basic Course */}
           <div className="rounded-3xl bg-[#0F0F11] p-10 flex flex-col border border-white/10 shadow-lg hover:border-white/20 transition-colors">
             <div className="mb-8">
@@ -83,7 +83,7 @@ export const Courses = () => {
         </div>
       </div>
       {/* Bottom Gradient for smooth transition */}
-      <div className="absolute bottom-0 left-0 w-full h-[500px] bg-gradient-to-b from-transparent to-black z-20 pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-full h-[500px] bg-gradient-to-b from-transparent to-black z-[5] pointer-events-none" />
     </section>
   );
 };
