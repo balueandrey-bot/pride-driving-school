@@ -5,7 +5,7 @@ export const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
           {/* Left Side */}
           <div className="flex flex-col gap-2 text-sm text-gray-400">
-            <h4 className="font-bold text-white mb-2">ООО "Прайдь"</h4>
+            <h4 className="font-bold text-white mb-2">ООО "Прайд"</h4>
             <p>ИНН: 1234567890</p>
             <p>+7 (999) 123-45-67</p>
           </div>
