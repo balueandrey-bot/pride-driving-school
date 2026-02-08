@@ -39,7 +39,7 @@ export const Reviews = () => {
           transition={{ duration: 1 }}
           className="w-full overflow-hidden pb-8"
         >
-          <div className="flex gap-6 animate-scroll w-max hover:[animation-play-state:paused]">
+          <div className="flex gap-6 animate-scroll w-max hover:[animation-play-state:paused] will-change-transform">
             {extendedCards.map((card, idx) => (
               <div 
                 key={idx} 
@@ -62,7 +62,7 @@ export const Reviews = () => {
               className="w-full h-[200px] md:h-[300px] rounded-[2rem] md:rounded-[3rem] bg-gradient-to-br from-[#00b4fc] to-[#007cf0] flex items-center justify-center shadow-[0_0_100px_rgba(0,180,252,0.15)] relative overflow-hidden group cursor-pointer hover:shadow-[0_0_120px_rgba(0,180,252,0.3)] transition-all duration-500"
             >
               {/* Glow effect */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-white/10 blur-[100px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-white/10 blur-[50px] md:blur-[100px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 will-change-transform" />
               
               <h3 className="text-3xl md:text-5xl font-bold text-white relative z-10">Отзывы</h3>
             </motion.div>

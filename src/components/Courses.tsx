@@ -25,10 +25,10 @@ export const Courses = () => {
       <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-black to-transparent z-[5] pointer-events-none" />
 
       {/* Background Blurs */}
-      <div className="absolute top-1/4 -left-32 w-[500px] h-[500px] bg-orange-900/20 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-1/4 -right-32 w-[500px] h-[500px] bg-red-900/10 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/4 -left-32 w-[500px] h-[500px] bg-orange-900/20 rounded-full blur-[60px] md:blur-[120px] pointer-events-none will-change-transform" />
+      <div className="absolute bottom-1/4 -right-32 w-[500px] h-[500px] bg-red-900/10 rounded-full blur-[60px] md:blur-[120px] pointer-events-none will-change-transform" />
       {/* Bottom transition blur */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[300px] bg-brand/5 blur-[100px] pointer-events-none" />
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[300px] bg-brand/5 blur-[50px] md:blur-[100px] pointer-events-none will-change-transform" />
 
       <div className="relative z-10 container mx-auto px-4">
         <motion.h2 
@@ -48,7 +48,7 @@ export const Courses = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="rounded-3xl bg-[#0F0F11] p-6 md:p-10 flex flex-col border border-white/10 shadow-lg hover:border-white/20 transition-colors"
+            className="rounded-3xl bg-[#0F0F11] p-6 md:p-10 flex flex-col border border-white/10 shadow-lg hover:border-white/20 transition-colors will-change-transform"
           >
             <div className="mb-8">
               <h3 className="text-2xl font-bold mb-2 text-white">Базовый</h3>
@@ -78,7 +78,7 @@ export const Courses = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="rounded-3xl bg-[#0F0F11] p-6 md:p-10 flex flex-col border border-brand shadow-[0_0_50px_rgba(228,84,0,0.3)] relative"
+            className="rounded-3xl bg-[#0F0F11] p-6 md:p-10 flex flex-col border border-brand shadow-[0_0_50px_rgba(228,84,0,0.3)] relative will-change-transform"
           >
             <div className="mb-8">
               <h3 className="text-2xl font-bold mb-2 text-white">VIP</h3>

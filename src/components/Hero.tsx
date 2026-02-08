@@ -28,7 +28,7 @@ export const Hero = ({ onOpenEnrollment }: HeroProps) => {
           transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
           src="images/logo.svg" 
           alt="Lion Background" 
-          className="w-full h-full object-contain opacity-20 md:opacity-40"
+          className="w-full h-full object-contain opacity-20 md:opacity-40 will-change-transform"
           style={{
             maskImage: 'linear-gradient(to left, black 0%, transparent 100%)',
             WebkitMaskImage: 'linear-gradient(to left, black 0%, transparent 100%)'
@@ -53,7 +53,7 @@ export const Hero = ({ onOpenEnrollment }: HeroProps) => {
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-5xl md:text-7xl lg:text-[8rem] font-russo leading-none uppercase tracking-wider text-white mt-4 md:mt-8 drop-shadow-2xl"
+            className="text-5xl md:text-7xl lg:text-[8rem] font-russo leading-none uppercase tracking-wider text-white mt-4 md:mt-8 drop-shadow-2xl will-change-transform"
           >
             ПРАЙД
           </motion.h1>
