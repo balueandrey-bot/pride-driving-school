@@ -4,16 +4,24 @@ import { Courses } from "./components/Courses";
 import { Instructors } from "./components/Instructors";
 import { Reviews } from "./components/Reviews";
 import { Footer } from "./components/Footer";
+import { EnrollmentForm } from "./components/EnrollmentForm";
+import { useState } from "react";
 
 function App() {
+  const [isEnrollmentOpen, setIsEnrollmentOpen] = useState(false);
+
   return (
     <main className="min-h-screen bg-black text-white font-sans antialiased selection:bg-yellow-500/30">
       <Header />
-      <Hero />
+      <Hero onOpenEnrollment={() => setIsEnrollmentOpen(true)} />
       <Courses />
       <Instructors />
       <Reviews />
       <Footer />
+      <EnrollmentForm 
+        isOpen={isEnrollmentOpen} 
+        onClose={() => setIsEnrollmentOpen(false)} 
+      />
     </main>
   );
 }

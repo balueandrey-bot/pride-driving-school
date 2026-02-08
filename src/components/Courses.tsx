@@ -1,4 +1,5 @@
 import { Check } from "lucide-react";
+import { motion } from "framer-motion";
 
 const featuresBasic = [
   "Теория онлайн или в классе",
@@ -19,7 +20,7 @@ const featuresVIP = [
 
 export const Courses = () => {
   return (
-    <section className="relative w-full pt-20 pb-32 bg-black text-white overflow-hidden">
+    <section id="courses" className="relative w-full pt-20 pb-32 bg-black text-white overflow-hidden">
       {/* Top Gradient for smooth transition from Hero */}
       <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-black to-transparent z-[5] pointer-events-none" />
 
@@ -30,11 +31,25 @@ export const Courses = () => {
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[300px] bg-brand/5 blur-[100px] pointer-events-none" />
 
       <div className="relative z-10 container mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-white">Курсы</h2>
+        <motion.h2 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-4xl md:text-5xl font-bold text-center mb-10 md:mb-16 text-white"
+        >
+          Курсы
+        </motion.h2>
 
         <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
           {/* Basic Course */}
-          <div className="rounded-3xl bg-[#0F0F11] p-10 flex flex-col border border-white/10 shadow-lg hover:border-white/20 transition-colors">
+          <motion.div 
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="rounded-3xl bg-[#0F0F11] p-6 md:p-10 flex flex-col border border-white/10 shadow-lg hover:border-white/20 transition-colors"
+          >
             <div className="mb-8">
               <h3 className="text-2xl font-bold mb-2 text-white">Базовый</h3>
               <p className="text-gray-400 text-sm">Идеальный старт для уверенного вождения</p>
@@ -55,10 +70,16 @@ export const Courses = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </motion.div>
 
           {/* VIP Course */}
-          <div className="rounded-3xl bg-[#0F0F11] p-10 flex flex-col border border-brand shadow-[0_0_50px_rgba(228,84,0,0.3)] relative">
+          <motion.div 
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="rounded-3xl bg-[#0F0F11] p-6 md:p-10 flex flex-col border border-brand shadow-[0_0_50px_rgba(228,84,0,0.3)] relative"
+          >
             <div className="mb-8">
               <h3 className="text-2xl font-bold mb-2 text-white">VIP</h3>
               <p className="text-gray-400 text-sm">Максимальный комфорт и гарантия результата</p>
@@ -79,7 +100,7 @@ export const Courses = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </motion.div>
         </div>
       </div>
       {/* Bottom Gradient for smooth transition */}
