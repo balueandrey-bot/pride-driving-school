@@ -3,19 +3,19 @@ import { motion } from "framer-motion";
 
 const instructors = [
   {
-    name: "Алексей",
+    name: "Имя",
     title: "Старший инструктор",
     exp: "15 лет стажа",
     gradient: "from-orange-500 to-red-600"
   },
   {
-    name: "Елена",
+    name: "Имя",
     title: "Инструктор",
     exp: "8 лет стажа",
     gradient: "from-blue-500 to-cyan-400"
   },
   {
-    name: "Дмитрий",
+    name: "Имя",
     title: "Инструктор",
     exp: "12 лет стажа",
     gradient: "from-purple-500 to-pink-600"
