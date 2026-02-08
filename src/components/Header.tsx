@@ -38,10 +38,10 @@ export const Header = () => {
            {/* Mobile Phone Button (Right) */}
            <a 
               href="tel:+79991234567" 
-              className="md:hidden absolute right-4 flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-400 hover:to-red-500 transition-all shadow-[0_0_20px_rgba(234,88,12,0.3)] shrink-0 z-20"
+              className="md:hidden absolute right-2 flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-400 hover:to-red-500 transition-all shadow-[0_0_20px_rgba(234,88,12,0.3)] shrink-0 z-20"
             >
-              <Phone className="w-4 h-4 text-white fill-current" />
-              <span className="text-xs font-bold text-white">+7 (999) 123-45-67</span>
+              <Phone className="w-3.5 h-3.5 text-white fill-current" />
+              <span className="text-[10px] font-bold text-white leading-tight">+7 (999) 123-45-67</span>
             </a>
 
           {/* Main Navigation Container */}
