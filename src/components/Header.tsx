@@ -76,7 +76,7 @@ export const Header = () => {
             {/* Theme Toggle */}
             <button 
               onClick={toggleTheme}
-              className="flex group w-10 h-10 rounded-full bg-gray-100 dark:bg-zinc-800 items-center justify-center hover:bg-gray-200 dark:hover:bg-zinc-700 transition-colors"
+              className="absolute left-20 md:static z-20 flex group w-10 h-10 rounded-full bg-gray-100 dark:bg-zinc-800 items-center justify-center hover:bg-gray-200 dark:hover:bg-zinc-700 transition-colors"
             >
               {theme === 'dark' ? (
                 <Sun className="w-5 h-5 text-black dark:text-white group-hover:text-brand transition-colors" />
