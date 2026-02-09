@@ -24,9 +24,9 @@ const instructors = [
 
 export const Instructors = () => {
   return (
-    <section id="instructors" className="relative w-full py-16 md:py-24 bg-black text-white overflow-hidden">
+    <section id="instructors" className="relative w-full py-16 md:py-24 bg-white dark:bg-black text-black dark:text-white overflow-hidden transition-colors duration-300">
       {/* Top Gradient for smooth transition */}
-      <div className="absolute top-0 left-0 w-full h-48 bg-gradient-to-b from-black to-transparent z-[5] pointer-events-none" />
+      <div className="absolute top-0 left-0 w-full h-48 bg-gradient-to-b from-white dark:from-black to-transparent z-[5] pointer-events-none" />
 
       {/* Background Blurs */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[300px] bg-blue-900/10 blur-[50px] md:blur-[100px] pointer-events-none will-change-transform" />
@@ -39,7 +39,7 @@ export const Instructors = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-4xl md:text-5xl font-bold text-center mb-12 md:mb-24 text-white"
+          className="text-4xl md:text-5xl font-bold text-center mb-12 md:mb-24 text-black dark:text-white"
         >
           Наши инструкторы
         </motion.h2>
@@ -52,7 +52,7 @@ export const Instructors = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: idx * 0.2 }}
-              className="bg-[#121212] rounded-[2rem] p-6 pt-0 md:p-8 md:pt-0 relative border border-white/5 flex flex-col items-center mt-12 hover:border-white/10 transition-colors will-change-transform"
+              className="bg-gray-100 dark:bg-[#121212] rounded-[2rem] p-6 pt-0 md:p-8 md:pt-0 relative border border-black/5 dark:border-white/5 flex flex-col items-center mt-12 hover:border-black/10 dark:hover:border-white/10 transition-colors will-change-transform"
             >
               {/* Avatar - Negative margin to pop out */}
               <div className={`w-24 h-24 md:w-32 md:h-32 rounded-full bg-gradient-to-br ${inst.gradient} flex items-center justify-center -mt-12 md:-mt-16 mb-6 md:mb-8 shadow-[0_10px_30px_rgba(0,0,0,0.5)]`}>
@@ -60,17 +60,17 @@ export const Instructors = () => {
               </div>
 
               <div className="text-center w-full">
-                <h3 className="text-xl md:text-2xl font-bold text-white mb-2">{inst.name}</h3>
+                <h3 className="text-xl md:text-2xl font-bold text-black dark:text-white mb-2">{inst.name}</h3>
                 <p className="text-brand text-xs md:text-sm font-medium mb-8 md:mb-12 uppercase tracking-wide">{inst.title}</p>
-                <div className="w-full h-px bg-white/5 mb-4 md:mb-6" />
-                <p className="text-gray-500 text-sm font-medium">{inst.exp}</p>
+                <div className="w-full h-px bg-black/5 dark:bg-white/5 mb-4 md:mb-6" />
+                <p className="text-gray-600 dark:text-gray-500 text-sm font-medium">{inst.exp}</p>
               </div>
             </motion.div>
           ))}
         </div>
       </div>
       {/* Bottom Gradient for smooth transition */}
-      <div className="absolute bottom-0 left-0 w-full h-64 md:h-96 bg-gradient-to-b from-transparent to-black z-[5] pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-full h-64 md:h-96 bg-gradient-to-b from-transparent to-white dark:to-black z-[5] pointer-events-none" />
     </section>
   );
 };

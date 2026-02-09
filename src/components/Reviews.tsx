@@ -2,21 +2,21 @@ import { Image } from "lucide-react";
 import { motion } from "framer-motion";
 
 const reviewCards = [
-  { bg: "bg-[#1f0d16]", border: "border-red-900/20" },
-  { bg: "bg-[#0d1f18]", border: "border-green-900/20" },
-  { bg: "bg-[#0d121f]", border: "border-blue-900/20" },
-  { bg: "bg-[#0d1f12]", border: "border-emerald-900/20" },
-  { bg: "bg-[#160d1f]", border: "border-purple-900/20" },
-  { bg: "bg-[#1f160d]", border: "border-orange-900/20" },
+  { bg: "bg-red-50 dark:bg-[#1f0d16]", border: "border-red-200 dark:border-red-900/20" },
+  { bg: "bg-green-50 dark:bg-[#0d1f18]", border: "border-green-200 dark:border-green-900/20" },
+  { bg: "bg-blue-50 dark:bg-[#0d121f]", border: "border-blue-200 dark:border-blue-900/20" },
+  { bg: "bg-emerald-50 dark:bg-[#0d1f12]", border: "border-emerald-200 dark:border-emerald-900/20" },
+  { bg: "bg-purple-50 dark:bg-[#160d1f]", border: "border-purple-200 dark:border-purple-900/20" },
+  { bg: "bg-orange-50 dark:bg-[#1f160d]", border: "border-orange-200 dark:border-orange-900/20" },
 ];
 
 const extendedCards = [...reviewCards, ...reviewCards, ...reviewCards, ...reviewCards];
 
 export const Reviews = () => {
   return (
-    <section id="reviews" className="relative w-full py-24 bg-black text-white overflow-hidden">
+    <section id="reviews" className="relative w-full py-24 bg-white dark:bg-black text-black dark:text-white overflow-hidden transition-colors duration-300">
       {/* Top Gradient for smooth transition */}
-      <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-black to-transparent z-[5] pointer-events-none" />
+      <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-white dark:from-black to-transparent z-[5] pointer-events-none" />
 
       <div className="relative z-10">
         <div className="container mx-auto px-4 mb-16">
@@ -25,7 +25,7 @@ export const Reviews = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-4xl md:text-5xl font-bold text-center text-white"
+            className="text-4xl md:text-5xl font-bold text-center text-black dark:text-white"
           >
             Отзывы
           </motion.h2>
@@ -45,7 +45,7 @@ export const Reviews = () => {
                 key={idx} 
                 className={`min-w-[200px] h-[280px] md:min-w-[240px] md:h-[320px] rounded-2xl ${card.bg} border ${card.border} flex items-center justify-center flex-shrink-0 hover:scale-105 transition-transform duration-300`}
               >
-                <Image className="w-12 h-12 text-white/10" />
+                <Image className="w-12 h-12 text-black/10 dark:text-white/10" />
               </div>
             ))}
           </div>
@@ -70,7 +70,7 @@ export const Reviews = () => {
         </div>
       </div>
       {/* Bottom Gradient for smooth transition */}
-      <div className="absolute bottom-0 left-0 w-full h-64 bg-gradient-to-b from-transparent to-black z-[5] pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-full h-64 bg-gradient-to-b from-transparent to-white dark:to-black z-[5] pointer-events-none" />
     </section>
   );
 };

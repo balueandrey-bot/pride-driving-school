@@ -11,7 +11,7 @@ function App() {
   const [isEnrollmentOpen, setIsEnrollmentOpen] = useState(false);
 
   return (
-    <main className="min-h-screen bg-black text-white font-sans antialiased selection:bg-yellow-500/30">
+    <main className="min-h-screen bg-white dark:bg-black text-black dark:text-white font-sans antialiased selection:bg-yellow-500/30">
       <Header />
       <Hero onOpenEnrollment={() => setIsEnrollmentOpen(true)} />
       <Courses />

@@ -8,7 +8,8 @@ html {
     scroll-behavior: smooth;
 }
 
-body {
-    background-color: #000;
-    color: #fff;
+@layer base {
+  body {
+    @apply bg-white text-black dark:bg-black dark:text-white transition-colors duration-300;
+  }
 }
